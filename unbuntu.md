@@ -60,8 +60,7 @@
 
 
 
-
-docker手动部署
+<h1>docker手动部署</h1>
     
     # 更新包数据库
     apt update
@@ -73,6 +72,7 @@ docker手动部署
     bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)
 
 确保可以运行后，修改镜像源
+
 ssh输入
 
     vim /etc/docker/daemon.json
@@ -85,10 +85,12 @@ ssh输入
         
       ]
     }
-    重启docker
+    
+重启docker
 
     systemctl daemon-reload
     systemctl restart docker
+    
 一键安装docker-compose安装脚本（已装可跳）
 
     curl -L "https://ghproxy.com/https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-        compose && chmod +x /usr/local/bin/docker-compose
