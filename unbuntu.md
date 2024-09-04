@@ -1,3 +1,83 @@
+第一步
+
+    apt update && apt upgrade   
+
+第二步
+
+     apt list #查看可安装的软件目录
+
+第三步（不可跳过）
+
+替换官方源为 TUNA 镜像源： 
+
+    pkg install vim  #安装vim编辑器
+
+    pkg install tsu  #安装sudo软件
+
+    ifconfig  #查看地址，以192.168开头
+
+    whoami   #查看自己的用户名
+
+    pkg install openssh  #安装SSH软件
+    pkg install nmap  #安装nmap
+    输入passwd添加密码（需要输入两次），
+    最后输入sshd
+    nmap （你的ip地址）来开启服务
+    下载xshell,新建 端口号8022，之后就可以使用电脑连手机了
+    每次重启Termux客户端的时候，都需要输入sshd命令来开启ssh服务
+手机连电脑
+
+    ssh user@（电脑服务器地址）
+    
+安装ubuntu
+    按顺序执行下面的命令即可
+
+    pkg install proot git python -y
+    git clone https://github.com/sqlsec/termux-install-linux
+    cd termux-install-linux
+    python termux-linux-install.py
+
+    cd ~/Termux-Linux/Ubuntu  #进入
+    ./start-ubuntu.sh
+
+    apt update && apt upgrade
+
+
+ubuntu安装完毕
+（over!!!!!!!!!!!!）
+
+
+    apt-get install sudo # 安装sudo
+    sudo apt-get update
+    sudo apt-get install curl
+    
+    bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)
+
+
+
+
+
+第四步
+
+安装linux(Ubuntu)
+
+     pkg install proot-distro
+
+    proot-distro list #查看可安装的Linux系统
+
+    proot-distro install ubuntu  #安装Ubuntu
+
+    proot-distro login ubuntu  #进入 Linux(Ubuntu)环境
+（出现root@localhost:~#  代表已进入Ubuntu环境）
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,7 +174,7 @@ ssh输入
 一键安装docker-compose安装脚本（已装可跳）
 
     curl -L "https://ghproxy.com/https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" 
-    -o /usr/local/bin/docker-        compose && chmod +x /usr/local/bin/docker-compose
+    -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
 青龙面板一键部署脚本（docker）
 
